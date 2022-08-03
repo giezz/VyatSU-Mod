@@ -5,11 +5,11 @@ import com.Mr_Gold832.vyatsu_mod.common.entity.GuardEntity;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
@@ -54,7 +54,4 @@ public class StudakItem extends Item {
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> ClientAccess.advancedItemToolTip(components));
         //components.add(Component.translatable("Your pass into new world"));
     }
-//"Guard: You can pass, student"
-
-
 }

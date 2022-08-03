@@ -9,6 +9,7 @@ import net.minecraft.world.item.BowlFoodItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -43,12 +44,16 @@ public class ItemInit {
     public static final RegistryObject<Item> SPRAVKA_ITEM = ITEMS.register("spravka_item",
             () -> new Item(new Item.Properties().tab(VyatsuMod.STU_TAB)));
 
-    //Food
+    //Items.Foods
     public static final RegistryObject<Item> INSTANT_NOODLES_ITEM = ITEMS.register("instant_noodles_item",
             () -> new Item(new Item.Properties().tab(VyatsuMod.STU_TAB).food(Foods.INSTANT_NOODLES_PROPERTIES)));
 
     public static final RegistryObject<Item> COOKED_NOODLES_ITEM = ITEMS.register("cooked_noodles_item",
             () -> new BowlFoodItem(new Item.Properties().tab(VyatsuMod.STU_TAB).food(Foods.COOKED_NOODLES_PROPERTIES)));
+
+    //Items.SpawnEggs
+    public static final RegistryObject<ForgeSpawnEggItem> EXAMPLE_ENTITY_SPAWN_EGG = ITEMS.register("example_entity_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.EXAMPLE_ENTITY, 0x1E51ED, 0x34BD27, new Item.Properties().tab(VyatsuMod.STU_TAB)));
 
     //Blocks
     public static final RegistryObject<BlockItem> DOSHIK_BLOCK_ITEM = ITEMS.register("noodle_block",
