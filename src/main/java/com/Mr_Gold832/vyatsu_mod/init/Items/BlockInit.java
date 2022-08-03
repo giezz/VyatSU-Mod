@@ -13,5 +13,4 @@ public class BlockInit {
     public static final RegistryObject<Block> DOSHIK_BLOCK  = BLOCKS.register("noodle_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(1f)));
 
-
 }

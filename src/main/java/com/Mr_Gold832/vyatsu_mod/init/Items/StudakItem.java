@@ -18,8 +18,8 @@ import net.minecraftforge.fml.DistExecutor;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class AdvancedItem extends Item {
-    public AdvancedItem(Properties properties){
+public class StudakItem extends Item {
+    public StudakItem(Properties properties) {
         super(properties);
     }
 
@@ -35,21 +35,21 @@ public class AdvancedItem extends Item {
 
     @Override
     public InteractionResult interactLivingEntity(ItemStack stack, Player player, LivingEntity guardEntity, InteractionHand hand) {
-        GuardEntity.resetFlag();
-        player.sendSystemMessage(Component.literal("Guard: You can pass, student"+GuardEntity.getFlag()));
+        GuardEntity.setFlag();
+        player.sendSystemMessage(Component.literal("Guard: You can pass, student" + GuardEntity.getFlag()));
 
         return super.interactLivingEntity(stack, player, guardEntity, hand);
     }
 
-//    @Override
-//    public boolean onLeftClickEntity(ItemStack stack, Player player, Entity guardEntity) {
-//        GuardEntity.setFlag();
-//        player.sendSystemMessage(Component.literal("Guard: You click on me successful"+GuardEntity.getFlag()));
-//        return super.onLeftClickEntity(stack, player, guardEntity);
-//    }
+    @Override
+    public boolean onLeftClickEntity(ItemStack stack, Player player, Entity guardEntity) {
+        GuardEntity.resetFlag();
+        player.sendSystemMessage(Component.literal("Guard: You click on me successful" + GuardEntity.getFlag()));
+        return super.onLeftClickEntity(stack, player, guardEntity);
+    }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag){
+    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
         super.appendHoverText(stack, level, components, flag);
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> ClientAccess.advancedItemToolTip(components));
         //components.add(Component.translatable("Your pass into new world"));

@@ -1,7 +1,7 @@
 package com.Mr_Gold832.vyatsu_mod.init;
 
 import com.Mr_Gold832.vyatsu_mod.VyatsuMod;
-import com.Mr_Gold832.vyatsu_mod.init.Items.AdvancedItem;
+import com.Mr_Gold832.vyatsu_mod.init.Items.StudakItem;
 import com.Mr_Gold832.vyatsu_mod.init.Items.BlockInit;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
@@ -27,7 +27,7 @@ public class ItemInit {
         }
     });
 
-    public static final RegistryObject<AdvancedItem> STUDAK_ITEM = ITEMS.register("studak_item", () -> new AdvancedItem(new Item.Properties().tab(VyatsuMod.STU_TAB)) {
+    public static final RegistryObject<StudakItem> STUDAK_ITEM = ITEMS.register("studak_item", () -> new StudakItem(new Item.Properties().tab(VyatsuMod.STU_TAB)) {
         @Override
         public int getBurnTime(ItemStack item, @Nullable RecipeType<?> recipeType) {
             return 100;
