@@ -1,0 +1,19 @@
+{
+    "entity.example_entity.ambient": {
+      "sounds": [
+          "vyatsu_mod:example_entity_ambient"
+      ]
+    },
+
+  "entity.example_entity.hurt": {
+    "sounds": [
+      "vyatsu_mod:example_entity_hurt"
+    ]
+  },
+
+  "entity.example_entity.death": {
+    "sounds": [
+      "vyatsu_mod:example_entity_death"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "vyatsu_mod:instant_noodles_item"
+    }
+  },
+  "result": {
+    "item": "vyatsu_mod:noodle_block",
+    "count": 1
+  }
+}

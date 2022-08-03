@@ -1,0 +1,16 @@
+{
+  "item.vyatsu_mod.studak_item": "Studak VyatSU",
+  "item.vyatsu_mod.laba_item": "Laboratory work",
+  "item.vyatsu_mod.donelaba_item": "Done laboratory work",
+  "item.vyatsu_mod.spravka_item": "Course completion certificate",
+  "item.vyatsu_mod.diploma_item": "Diploma",
+  "item.vyatsu_mod.instant_noodles_item": "Instant noodles",
+  "item.vyatsu_mod.cooked_noodles_item": "Cooked noodles",
+
+  "block.vyatsu_mod.noodle_block": "Noodle block",
+
+  "itemGroup.vyatsu_mod": "VyatSU Mod",
+
+  "entity.vyatsu_mod.example_entity": "Mr.Bebrus",
+  "entity.vyatsu_mod.guard_entity": "Guard VyatSU"
+}

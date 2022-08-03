@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#H#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:egg"
+    },
+    "H": {
+      "item": "minecraft:hay_block"
+    }
+  },
+  "result": {
+    "item": "vyatsu_mod:noodle_block",
+    "count": 1
+  }
+}
