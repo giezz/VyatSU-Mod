@@ -1,13 +1,12 @@
 package com.Mr_Gold832.vyatsu_mod.init;
 
 import com.Mr_Gold832.vyatsu_mod.VyatsuMod;
+import com.Mr_Gold832.vyatsu_mod.init.Items.ModMusicDiscItem;
 import com.Mr_Gold832.vyatsu_mod.init.Items.StudakItem;
 import com.Mr_Gold832.vyatsu_mod.init.Items.BlockInit;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.BowlFoodItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;
@@ -35,6 +34,12 @@ public class ItemInit {
         }
     });
 
+//    public static final RegistryObject<Item> PROMISES_DISC = ITEMS.register("disck_promises",
+//            () -> new ModMusicDiscItem(5, SoundInit.LAZY_PROMISES_MUSIC.get(),new Item(new Item.Properties().tab(VyatsuMod.STU_TAB))));
+
+    public static final RegistryObject<Item> MUSIC_DISC_VYATSU = ITEMS.register("music_disc_vyatsu",
+            () -> new RecordItem(13, SoundInit.MUSIC_DISC_VYATSU, (new Item.Properties()).stacksTo(1).tab(VyatsuMod.STU_TAB).rarity(Rarity.RARE)));
+
     public static final RegistryObject<Item> LABA_ITEM = ITEMS.register("laba_item",
             () -> new Item(new Item.Properties().tab(VyatsuMod.STU_TAB)));
 
@@ -53,8 +58,9 @@ public class ItemInit {
 
     //Items.SpawnEggs
     public static final RegistryObject<ForgeSpawnEggItem> EXAMPLE_ENTITY_SPAWN_EGG = ITEMS.register("example_entity_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.EXAMPLE_ENTITY, 0x1E51ED, 0x34BD27, new Item.Properties().tab(VyatsuMod.STU_TAB)));
-
+            () -> new ForgeSpawnEggItem(EntityInit.EXAMPLE_ENTITY, 0x4a342c, 0x402917, new Item.Properties().tab(VyatsuMod.STU_TAB)));
+    public static final RegistryObject<ForgeSpawnEggItem> GUARD_ENTITY_SPAWN_EGG = ITEMS.register("guard_entity_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.GUARD_ENTITY, 0x101010, 0xc9c900, new Item.Properties().tab(VyatsuMod.STU_TAB)));
     //Blocks
     public static final RegistryObject<BlockItem> DOSHIK_BLOCK_ITEM = ITEMS.register("noodle_block",
             () -> new BlockItem(BlockInit.DOSHIK_BLOCK.get(), new Item.Properties().tab(VyatsuMod.STU_TAB)));
