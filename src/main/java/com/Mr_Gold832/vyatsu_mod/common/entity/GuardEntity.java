@@ -94,8 +94,10 @@ public class GuardEntity extends PathfinderMob implements NeutralMob {
     public boolean isAngryAt(LivingEntity livingEntity) {
         if (!this.canAttack(livingEntity) || studak_flag) {
             return false;
+        } else {
+            this.playSound(SoundInit.GUARD_ENTITY_ANGRY.get());
+            return !livingEntity.getItemInHand(InteractionHand.MAIN_HAND).is(ItemInit.STUDAK_ITEM.get());
         }
-        return !livingEntity.getItemInHand(InteractionHand.MAIN_HAND).is(ItemInit.STUDAK_ITEM.get());
     }
 
     @Override
@@ -108,16 +110,16 @@ public class GuardEntity extends PathfinderMob implements NeutralMob {
         this.setRemainingPersistentAngerTime(PERSISTENT_ANGER_TIME.sample(this.random));
     }
 
-    public void setRemainingPersistentAngerTime(int p_28859_) {
-        this.remainingPersistentAngerTime = p_28859_;
+    public void setRemainingPersistentAngerTime(int i) {
+        this.remainingPersistentAngerTime = i;
     }
 
     public int getRemainingPersistentAngerTime() {
         return this.remainingPersistentAngerTime;
     }
 
-    public void setPersistentAngerTarget(@Nullable UUID p_28855_) {
-        this.persistentAngerTarget = p_28855_;
+    public void setPersistentAngerTarget(@Nullable UUID uuid) {
+        this.persistentAngerTarget = uuid;
     }
 
     @Nullable

@@ -2,7 +2,7 @@ package com.Mr_Gold832.vyatsu_mod;
 
 import com.Mr_Gold832.vyatsu_mod.init.EntityInit;
 import com.Mr_Gold832.vyatsu_mod.init.ItemInit;
-import com.Mr_Gold832.vyatsu_mod.init.Items.BlockInit;
+import com.Mr_Gold832.vyatsu_mod.init.BlockInit;
 import com.Mr_Gold832.vyatsu_mod.init.SoundInit;
 import com.Mr_Gold832.vyatsu_mod.painting.PaintingInit;
 import net.minecraft.world.item.CreativeModeTab;
