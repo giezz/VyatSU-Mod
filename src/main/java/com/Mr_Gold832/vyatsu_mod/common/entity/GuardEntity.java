@@ -11,10 +11,7 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.MoveTowardsTargetGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.ResetUniversalAngerTargetGoal;
@@ -36,12 +33,15 @@ public class GuardEntity extends PathfinderMob implements NeutralMob {
     private static final UniformInt PERSISTENT_ANGER_TIME = TimeUtil.rangeOfSeconds(0, 2);
     private int remainingPersistentAngerTime;
 
+    private boolean studak_flag = false;
+
     public GuardEntity(EntityType<GuardEntity> entityType, Level level) {
         super(entityType, level);
     }
 
     @Override
     protected void registerGoals() {
+        this.goalSelector.addGoal(1, new FloatGoal(this));
         this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.0D, true));
         this.goalSelector.addGoal(2, new MoveTowardsTargetGoal(this, 0.9D, 32.0F));
         this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, 6.0F));
@@ -69,6 +69,7 @@ public class GuardEntity extends PathfinderMob implements NeutralMob {
         } else {
             player.playSound(SoundInit.GUARD_ENTITY_PASS.get());
             forgetCurrentTargetAndRefreshUniversalAnger();
+            this.studak_flag = true;
             return InteractionResult.sidedSuccess(this.level.isClientSide);
         }
     }
@@ -91,7 +92,7 @@ public class GuardEntity extends PathfinderMob implements NeutralMob {
 
     @Override
     public boolean isAngryAt(LivingEntity livingEntity) {
-        if (!this.canAttack(livingEntity)) {
+        if (!this.canAttack(livingEntity) || studak_flag) {
             return false;
         }
         return !livingEntity.getItemInHand(InteractionHand.MAIN_HAND).is(ItemInit.STUDAK_ITEM.get());
