@@ -37,6 +37,10 @@ public final class SoundInit {
             "entity.guard_entity.pass",
             () -> new SoundEvent(new ResourceLocation(VyatsuMod.MODID, "entity.guard_entity.pass")));
 
+    public static final RegistryObject<SoundEvent> GUARD_ENTITY_ANGRY = SOUNDS.register(
+            "entity.guard_entity.angry",
+            () -> new SoundEvent(new ResourceLocation(VyatsuMod.MODID, "entity.guard_entity.angry")));
+
 //    public static final RegistryObject<SoundEvent> GUARD_ENTITY_DEATH = SOUNDS.register(
 //            "entity.guard_entity.death",
 //            () -> new SoundEvent(new ResourceLocation(VyatsuMod.MODID, "entity.guard_entity.death")));

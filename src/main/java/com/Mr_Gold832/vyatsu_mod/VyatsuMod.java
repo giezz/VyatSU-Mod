@@ -5,10 +5,13 @@ import com.Mr_Gold832.vyatsu_mod.init.ItemInit;
 import com.Mr_Gold832.vyatsu_mod.init.BlockInit;
 import com.Mr_Gold832.vyatsu_mod.init.SoundInit;
 import com.Mr_Gold832.vyatsu_mod.painting.PaintingInit;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.jetbrains.annotations.NotNull;
 
@@ -29,6 +32,10 @@ public class VyatsuMod
         BlockInit.BLOCKS.register(bus);
         EntityInit.ENTITIES.register(bus);
         PaintingInit.PAINTINGS.register(bus);
+    }
+
+    private void clientSetup(final FMLClientSetupEvent event){
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.TABLE_BLOCK.get(), RenderType.translucent());
     }
 
     public static final CreativeModeTab STU_TAB = new CreativeModeTab(MODID) {

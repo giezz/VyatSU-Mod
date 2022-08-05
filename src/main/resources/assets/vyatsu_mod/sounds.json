@@ -36,6 +36,12 @@
     ]
   },
 
+  "entity.guard_entity.angry": {
+    "sounds": [
+      "vyatsu_mod:guard_entity_angry"
+    ]
+  },
+
   "sound.vyatsu_song": {
     "sounds": [
       "vyatsu_mod:music_disc_vyatsu"

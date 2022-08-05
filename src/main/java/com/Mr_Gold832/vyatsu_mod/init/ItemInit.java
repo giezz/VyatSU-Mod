@@ -62,6 +62,9 @@ public class ItemInit {
     public static final RegistryObject<BlockItem> DOSHIK_BLOCK_ITEM = ITEMS.register("noodle_block",
             () -> new BlockItem(BlockInit.DOSHIK_BLOCK.get(), new Item.Properties().tab(VyatsuMod.STU_TAB)));
 
+    public static final RegistryObject<BlockItem> TABLE_BLOCK = ITEMS.register("table_block",
+            () -> new BlockItem(BlockInit.TABLE_BLOCK.get(), new Item.Properties().tab(VyatsuMod.STU_TAB)));
+
     public static class Foods {
         public static final FoodProperties INSTANT_NOODLES_PROPERTIES = new FoodProperties.Builder()
                 .nutrition(3)
