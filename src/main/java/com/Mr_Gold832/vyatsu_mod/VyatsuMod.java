@@ -12,7 +12,9 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.jetbrains.annotations.NotNull;
 
+/* TODO
 
+ */
 
 @Mod(VyatsuMod.MODID)
 public class VyatsuMod

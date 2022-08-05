@@ -26,6 +26,7 @@ import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.TemptGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.Nullable;
 
 public class ExampleEntity extends Animal {
 
@@ -50,8 +51,6 @@ public class ExampleEntity extends Animal {
     public static AttributeSupplier.Builder createAttributes() {
         return Mob.createMobAttributes().add(net.minecraft.world.entity.ai.attributes.Attributes.MAX_HEALTH, 6.0D).add(Attributes.MOVEMENT_SPEED, 0.24D);
     }
-
-
 
     @Override
     protected SoundEvent getHurtSound(DamageSource source) {
