@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "vyatsu_mod:blocks/noodle_block"
-  }
-}

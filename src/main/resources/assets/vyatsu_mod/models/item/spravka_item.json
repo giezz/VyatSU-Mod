@@ -1,6 +1,0 @@
-{
-  "parent" : "minecraft:item/generated",
-  "textures" : {
-    "layer0" : "vyatsu_mod:items/spravka_item"
-  }
-}
