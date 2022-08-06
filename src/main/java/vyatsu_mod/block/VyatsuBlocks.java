@@ -14,7 +14,6 @@ import vyatsu_mod.items.VyatsuItems;
 
 import java.util.function.Supplier;
 
-
 public class VyatsuBlocks {
 
     private static final CreativeModeTab TAB = VyatsuMod.VYATSU_MOD_TAB;

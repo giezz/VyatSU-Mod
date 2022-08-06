@@ -38,13 +38,15 @@ public class VyatsuItems {
             () -> new Item(defaultBuilder()));
     public static final RegistryObject<Item> SPRAVKA = ITEMS.register("spravka",
             () -> new Item(defaultBuilder()));
+
     public static final RegistryObject<Item> INSTANT_NOODLES = ITEMS.register("instant_noodles",
             () -> new Item(new Item.Properties().tab(TAB).food(Foods.NOODLES_FOOD_PROPS)));
+    public static final RegistryObject<Item> COOKED_NOODLES = ITEMS.register("cooked_noodles",
+            () -> new BowlFoodItem(defaultBuilder().stacksTo(1).food(Foods.COOKED_NOODLES_FOOD_PROPS)));
+
     public static final RegistryObject<Item> VYATSU_SONG_MUSIC_DISC = ITEMS.register("vyatsu_song_music_disc",
             () -> new RecordItem(4, VyatsuSounds.VYATSU_SONG, new Item.Properties().tab(TAB).food(Foods.NOODLES_FOOD_PROPS).stacksTo(1)));
 
-    public static final RegistryObject<Item> COOKED_NOODLES = ITEMS.register("cooked_noodles",
-            () -> new BowlFoodItem(defaultBuilder().stacksTo(1).food(Foods.COOKED_NOODLES_FOOD_PROPS)));
 
     public static Item.Properties defaultBuilder() {
         return new Item.Properties().tab(TAB);
