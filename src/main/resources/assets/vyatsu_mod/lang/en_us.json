@@ -1,0 +1,16 @@
+{
+  "itemGroup.vyatsu_mod": "VyatSU Mod",
+
+  "item.vyatsu_mod.test_item": "Test Item",
+  "item.vyatsu_mod.studak": "Studak VyatSU",
+  "item.vyatsu_mod.laba": "Laboratory work",
+  "item.vyatsu_mod.donelaba": "Done laboratory work",
+  "item.vyatsu_mod.spravka": "Course completion certificate",
+  "item.vyatsu_mod.diploma": "Diploma",
+
+  "block.vyatsu_mod.noodle_block": "Noodle Block",
+  "block.vyatsu_mod.test_block": "Test Block",
+
+  "tooltip.vyatsu_mod.studak.tooltip.shift": "Studak is a your pass into new world! With it, you can:\nPass through the §6Guard§r\nFlex with your friends\n3",
+  "tooltip.vyatsu_mod.studak.tooltip": "Press §eSHIFT§r for more information"
+}
