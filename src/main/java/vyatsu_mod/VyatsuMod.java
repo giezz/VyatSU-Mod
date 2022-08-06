@@ -9,7 +9,9 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
 import vyatsu_mod.block.VyatsuBlocks;
+import vyatsu_mod.entity.VyatsuEntities;
 import vyatsu_mod.items.VyatsuItems;
 
 @Mod(VyatsuMod.MOD_ID)
@@ -20,10 +22,12 @@ public class VyatsuMod {
     public VyatsuMod() {
 //        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 //        MinecraftForge.EVENT_BUS.register(this);
+        GeckoLib.initialize();
 
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         VyatsuItems.ITEMS.register(bus);
         VyatsuBlocks.BLOCKS.register(bus);
+        VyatsuEntities.ENTITY_TYPES.register(bus);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
