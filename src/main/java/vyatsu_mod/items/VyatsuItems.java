@@ -1,15 +1,13 @@
 package vyatsu_mod.items;
 
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BowlFoodItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import vyatsu_mod.VyatsuMod;
+import vyatsu_mod.sounds.VyatsuSounds;
 
 import javax.annotation.Nullable;
 
@@ -42,6 +40,8 @@ public class VyatsuItems {
             () -> new Item(defaultBuilder()));
     public static final RegistryObject<Item> INSTANT_NOODLES = ITEMS.register("instant_noodles",
             () -> new Item(new Item.Properties().tab(TAB).food(Foods.NOODLES_FOOD_PROPS)));
+    public static final RegistryObject<Item> VYATSU_SONG_MUSIC_DISC = ITEMS.register("vyatsu_song_music_disc",
+            () -> new RecordItem(4, VyatsuSounds.VYATSU_SONG, new Item.Properties().tab(TAB).food(Foods.NOODLES_FOOD_PROPS).stacksTo(1)));
 
     public static final RegistryObject<Item> COOKED_NOODLES = ITEMS.register("cooked_noodles",
             () -> new BowlFoodItem(defaultBuilder().stacksTo(1).food(Foods.COOKED_NOODLES_FOOD_PROPS)));

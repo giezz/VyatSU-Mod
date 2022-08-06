@@ -1,0 +1,10 @@
+{
+  "vyatsu_song": {
+    "sounds": [
+      {
+        "name": "vyatsu_mod:vyatsu_song",
+        "stream": true
+      }
+    ]
+  }
+}

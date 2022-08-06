@@ -7,6 +7,8 @@
   "item.vyatsu_mod.donelaba": "Done laboratory work",
   "item.vyatsu_mod.spravka": "Course completion certificate",
   "item.vyatsu_mod.diploma": "Diploma",
+  "item.vyatsu_mod.vyatsu_song_music_disc": "VyatSU Song",
+  "item.vyatsu_mod.vyatsu_song_music_disc.desc": "Song - VyatSU song",
 
   "block.vyatsu_mod.noodle_block": "Noodle Block",
   "block.vyatsu_mod.test_block": "Test Block",

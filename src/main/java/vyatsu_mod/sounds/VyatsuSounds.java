@@ -10,7 +10,7 @@ import vyatsu_mod.VyatsuMod;
 public class VyatsuSounds {
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, VyatsuMod.MOD_ID);
 
-//    public static final RegistryObject<SoundEvent>
+    public static final RegistryObject<SoundEvent> VYATSU_SONG = registrySoundEvent("vyatsu_song");
 
     private static RegistryObject<SoundEvent> registrySoundEvent(String name) {
         return SOUNDS.register(name, () -> new SoundEvent(new ResourceLocation(VyatsuMod.MOD_ID, name)));
