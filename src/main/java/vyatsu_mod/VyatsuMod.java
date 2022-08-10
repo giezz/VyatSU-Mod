@@ -11,10 +11,11 @@ import software.bernie.geckolib3.GeckoLib;
 import vyatsu_mod.block.VyatsuBlocks;
 import vyatsu_mod.entity.VyatsuEntities;
 import vyatsu_mod.items.VyatsuItems;
+import vyatsu_mod.world.structure.ModStructures;
 
 @Mod(VyatsuMod.MOD_ID)
 public class VyatsuMod {
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
     public static final String MOD_ID = "vyatsu_mod";
 
     public VyatsuMod() {
@@ -26,13 +27,14 @@ public class VyatsuMod {
         VyatsuItems.ITEMS.register(bus);
         VyatsuBlocks.BLOCKS.register(bus);
         VyatsuEntities.ENTITY_TYPES.register(bus);
+        ModStructures.register(bus);
     }
 
-    private void setup(final FMLCommonSetupEvent event) {
-        // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
-    }
+//    private void setup(final FMLCommonSetupEvent event) {
+//        // some preinit code
+//        LOGGER.info("HELLO FROM PREINIT");
+//        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+//    }
 
     public static final CreativeModeTab VYATSU_MOD_TAB = new CreativeModeTab(MOD_ID) {
         @Override
