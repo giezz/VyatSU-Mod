@@ -11,6 +11,7 @@ import software.bernie.geckolib3.GeckoLib;
 import vyatsu_mod.block.VyatsuBlocks;
 import vyatsu_mod.entity.VyatsuEntities;
 import vyatsu_mod.items.VyatsuItems;
+import vyatsu_mod.sounds.VyatsuSounds;
 import vyatsu_mod.world.structure.ModStructures;
 
 @Mod(VyatsuMod.MOD_ID)
@@ -27,6 +28,7 @@ public class VyatsuMod {
         VyatsuItems.ITEMS.register(bus);
         VyatsuBlocks.BLOCKS.register(bus);
         VyatsuEntities.ENTITY_TYPES.register(bus);
+        VyatsuSounds.SOUNDS.register(bus);
         ModStructures.register(bus);
     }
 
